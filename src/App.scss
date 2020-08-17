@@ -1,0 +1,16 @@
+// variables naudoju tam, kad pasikeitus "biznio" norams, lengviau pasikeistu spalvos, ir nereiketu begioti per koda keitinejant jas.
+// praktika, kuria naudojom Hostmakeryje.
+
+$white: #fff;
+
+.section {
+  background: $white;
+}
+
+.container {
+  background: $white;
+  box-shadow: 0 0 14px rgba(41,44,70,.06);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
