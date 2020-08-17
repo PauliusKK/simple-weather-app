@@ -1,16 +1,55 @@
 // variables naudoju tam, kad pasikeitus "biznio" norams, lengviau pasikeistu spalvos, ir nereiketu begioti per koda keitinejant jas.
 // praktika, kuria naudojom Hostmakeryje.
 
-$white: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-.section {
-  background: $white;
+$white: #fff;
+$gray: #fafafa;
+$text-black: #333;
+$border-gray: #d4d4d4;
+$text-darker: #202020;
+
+body {
+  background: $gray;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
   background: $white;
-  box-shadow: 0 0 14px rgba(41,44,70,.06);
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px auto;
+  border-radius: 4px;
+}
+
+.inputContainer {
+  margin: 35px 0;
+
+  label {
+    display: block;
+    font-weight: 500;
+    color: $text-black;
+    font-size: 16px;
+  }
+
+  input {
+    border: 1px solid $border-gray;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 300;
+    color: $text-darker;
+    margin-top: 5px;
+  }
+}
+
+.widgetContainer {
+  margin-bottom: 35px;
+}
+
+.weatherWidget {
+  top: 0 !important;
 }
