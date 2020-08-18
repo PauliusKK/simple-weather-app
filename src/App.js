@@ -32,8 +32,6 @@ function App() {
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
-  
-  navigator.geolocation.getCurrentPosition(success, error, options);
 
   function handleWeatherData(url) {
     return axios.get(url)
@@ -78,6 +76,8 @@ function App() {
 
     return () => clearTimeout(delayDebounceFn)
   }, [city])
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
 
   return (
     <div className="section">
