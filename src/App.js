@@ -75,6 +75,8 @@ function App() {
     }, timeToWaitToSearch)
 
     return () => clearTimeout(delayDebounceFn)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [city])
 
   navigator.geolocation.getCurrentPosition(success, error, options);
